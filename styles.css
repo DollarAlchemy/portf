@@ -3,27 +3,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Light Mode Styles */
+/* Light Mode Styles - Cottagecore Beachy Theme */
 body.light-mode {
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #FAF3E0; /* Warm Sand */
+    color: #5A4234; /* Soft Cocoa */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-/* Dark Mode Styles */
+/* Dark Mode Styles - Cozy Evening Beach */
 body.dark-mode {
-    background-color: #1a1a1a;
-    color: #f4f4f4;
+    background-color: #2E3B3E; /* Deep Ocean */
+    color: #F4E3D7; /* Warm Linen */
 }
 
 /* Header */
 header {
     text-align: center;
     padding: 20px;
-    background: #222;
-    color: #fff;
+    background: #A67B5B; /* Warm Driftwood */
+    color: #FFF5E1; /* Sunlit Shell */
+    transition: background 0.3s ease-in-out;
 }
 
 /* Navigation */
@@ -32,6 +35,8 @@ nav ul {
     display: flex;
     justify-content: center;
     padding: 10px 0;
+    gap: 15px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li {
@@ -39,8 +44,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #5A4234; /* Cocoa */
     text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #C68B59; /* Golden Sand */
 }
 
 /* Sections */
@@ -48,39 +59,42 @@ nav ul li a {
     margin: 40px auto;
     padding: 20px;
     max-width: 800px;
-    background: white;
+    background: #FFF8E1; /* Soft Sunrise */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 /* Dark Mode Section Override */
 body.dark-mode .container {
-    background: #333;
-    color: white;
+    background: #3A4D4F; /* Twilight Sea */
+    color: #F4E3D7; /* Warm Linen */
 }
 
 /* Button */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #222;
-    color: white;
+    background: #C68B59; /* Golden Sand */
+    color: #FFF8E1; /* Soft Sunrise */
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .btn:hover {
-    background: #444;
+    background: #A67B5B; /* Warm Driftwood */
+    transform: scale(1.05);
 }
 
 /* Dark Mode Button Override */
 body.dark-mode .btn {
-    background: white;
-    color: #222;
+    background: #F4E3D7; /* Warm Linen */
+    color: #2E3B3E; /* Deep Ocean */
 }
 
 body.dark-mode .btn:hover {
-    background: #ddd;
+    background: #D9B18E; /* Soft Sandstone */
+    transform: scale(1.05);
 }
