@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thomas Giardino | Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="light-mode">
     <header>
         <h1>Thomas Giardino</h1>
         <p>Creative Problem Solver | Leader | Game Developer</p>
+        
+        <!-- Dark Mode Toggle Button -->
+        <button id="theme-toggle" class="btn">🌞 Toggle Dark Mode</button>
+        
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
@@ -21,14 +25,14 @@
         </nav>
     </header>
     
-    <section id="about">
+    <section id="about" class="container">
         <h2>About Me</h2>
         <p>Natural leader with 3+ years in administration, HR, and game development.</p>
     </section>
     
-    <section id="resume">
+    <section id="resume" class="container">
         <h2>Resume</h2>
-        <a href="assets/pdfs/Thomas_Giardino_Resume.pdf" download>Download Resume</a>
+        <a href="assets/pdfs/blank.txt" class="btn" download>Download Resume</a>
         <div class="resume-content">
             <h3>Experience</h3>
             <p><strong>Deputy Court Clerk Supervisor</strong> - Fulton County, GA (2021-2022)</p>
@@ -38,22 +42,26 @@
         </div>
     </section>
     
-    <section id="projects">
+    <section id="projects" class="container">
         <h2>Projects</h2>
         <div class="project-list"></div>
     </section>
     
-    <section id="testimonials">
+    <section id="testimonials" class="container">
         <h2>Testimonials</h2>
         <p>"Thomas is a fantastic leader and team player." - Former Colleague</p>
     </section>
     
-    <section id="contact">
+    <section id="contact" class="container">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:thomasjgiardino@gmail.com">thomasjgiardino@gmail.com</a></p>
         <p>GitHub: <a href="https://github.com/dollaralchemy">github.com/dollaralchemy</a></p>
     </section>
     
-    <script src="js/script.js"></script>
+    <footer>
+        <p>&copy; 2024 Thomas Giardino. All Rights Reserved.</p>
+    </footer>
+    
+    <script src="script.js"></script>
 </body>
 </html>
