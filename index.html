@@ -7,60 +7,34 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="light-mode">
-    <header>
-        <h1>Thomas Giardino</h1>
-        <p>Creative Problem Solver | Leader | Game Developer</p>
-        
-        <!-- Dark Mode Toggle Button -->
-        <button id="theme-toggle" class="btn">🌞 Toggle Dark Mode</button>
-        
-        <nav>
+    <div class="wrapper">
+        <!-- Sidebar Navigation Panel -->
+        <aside class="sidebar">
+            <h2>Navigation</h2>
             <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" onclick="loadContent('about')">About</a></li>
+                <li><a href="#resume" onclick="loadContent('resume')">Resume</a></li>
+                <li><a href="#projects" onclick="loadContent('projects')">Projects</a></li>
+                <li><a href="#testimonials" onclick="loadContent('testimonials')">Testimonials</a></li>
+                <li><a href="#contact" onclick="loadContent('contact')">Contact</a></li>
             </ul>
-        </nav>
-    </header>
-    
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <p>Natural leader with 3+ years in administration, HR, and game development.</p>
-    </section>
-    
-    <section id="resume" class="container">
-        <h2>Resume</h2>
-        <a href="assets/pdfs/blank.txt" class="btn" download>Download Resume</a>
-        <div class="resume-content">
-            <h3>Experience</h3>
-            <p><strong>Deputy Court Clerk Supervisor</strong> - Fulton County, GA (2021-2022)</p>
-            <p>Managed confidential records and improved workflow efficiency.</p>
-            <h3>Education</h3>
-            <p>B.A. Political Science - Georgia State University (2019)</p>
-        </div>
-    </section>
-    
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="project-list"></div>
-    </section>
-    
-    <section id="testimonials" class="container">
-        <h2>Testimonials</h2>
-        <p>"Thomas is a fantastic leader and team player." - Former Colleague</p>
-    </section>
-    
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:thomasjgiardino@gmail.com">thomasjgiardino@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/dollaralchemy">github.com/dollaralchemy</a></p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2024 Thomas Giardino. All Rights Reserved.</p>
-    </footer>
+        </aside>
+        
+        <!-- Main Content Area -->
+        <main class="main-content">
+            <header class="header">
+                <h1>Thomas Giardino</h1>
+                <p>Creative Problem Solver | Leader | Game Developer</p>
+                <button id="theme-toggle" class="btn">🌞 Toggle Dark Mode</button>
+            </header>
+            
+            <!-- Dynamic Content Section -->
+            <section id="content-area">
+                <h2>Welcome</h2>
+                <p>Select a section from the navigation to explore more about me.</p>
+            </section>
+        </main>
+    </div>
     
     <script src="script.js"></script>
 </body>
