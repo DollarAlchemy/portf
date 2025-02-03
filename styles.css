@@ -20,72 +20,107 @@ body.dark-mode {
     color: #F4E3D7; /* Warm Linen */
 }
 
-/* Header */
-header {
-    text-align: center;
-    padding: 20px;
-    background: #A67B5B; /* Warm Driftwood */
-    color: #FFF5E1; /* Sunlit Shell */
-    transition: background 0.3s ease-in-out;
-}
-
-/* Navigation */
-nav ul {
-    list-style: none;
+/* Layout Structure */
+.wrapper {
     display: flex;
-    justify-content: center;
-    padding: 10px 0;
-    gap: 15px;
-    transition: all 0.3s ease-in-out;
+    height: 100vh;
 }
 
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #5A4234; /* Cocoa */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-nav ul li a:hover {
-    color: #C68B59; /* Golden Sand */
-}
-
-/* Sections */
-.container {
-    margin: 40px auto;
+/* Sidebar (Navigation) */
+.sidebar {
+    width: 250px;
+    background: #A67B5B; /* Warm Driftwood */
     padding: 20px;
-    max-width: 800px;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+    color: #FFF5E1; /* Sunlit Shell */
+    border-right: 3px solid #C68B59;
+    font-size: 1.1em;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 12px;
+    border-bottom: 1px solid #C68B59; /* Golden Sand */
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #FFF5E1;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s, transform 0.2s;
+}
+
+.sidebar ul li a:hover {
+    color: #FAF3E0;
+    transform: translateX(5px);
+}
+
+/* Main Content Area */
+.main-content {
+    margin-left: 270px;
+    padding: 30px;
+    width: calc(100% - 270px);
     background: #FFF8E1; /* Soft Sunrise */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
-/* Dark Mode Section Override */
-body.dark-mode .container {
+body.dark-mode .main-content {
     background: #3A4D4F; /* Twilight Sea */
     color: #F4E3D7; /* Warm Linen */
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 25px;
+    background: #A67B5B; /* Warm Driftwood */
+    color: #FFF5E1; /* Sunlit Shell */
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-bottom: 3px solid #C68B59;
+}
+
+/* Dynamic Content Section */
+#content-area {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode #content-area {
+    background: #3A4D4F;
+    color: #F4E3D7;
 }
 
 /* Button */
 .btn {
     display: inline-block;
-    padding: 10px 20px;
+    padding: 12px 24px;
     background: #C68B59; /* Golden Sand */
     color: #FFF8E1; /* Soft Sunrise */
     border: none;
-    border-radius: 5px;
+    border-radius: 6px;
     cursor: pointer;
     transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    font-size: 1.1em;
 }
 
 .btn:hover {
     background: #A67B5B; /* Warm Driftwood */
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
 
 /* Dark Mode Button Override */
@@ -96,5 +131,5 @@ body.dark-mode .btn {
 
 body.dark-mode .btn:hover {
     background: #D9B18E; /* Soft Sandstone */
-    transform: scale(1.05);
+    transform: scale(1.08);
 }
